@@ -8,15 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   </head>
   <body>
-    <div id="root">{{greetings}}</div>
+    <div id="app">{{greetings}}</div>
     <div id="app-2">
       <span v-bind:title="message"> Hover your mouse over me for a few seconds to see my dynamically bound title! </span>
       <p><a :href="url">Google Home Page</a></p>
     </div>
+    <div id="app-3">
+      <p v-if="display">I am visible, Yay!</p>
+    </div>
   </body>
   <script>
     let app = new Vue({
-      el: '#root',
+      el: '#app',
       data: {
         greetings: 'hello world',
       },
@@ -27,6 +30,13 @@
       data: {
         message: 'You loaded this page on ' + new Date().toLocaleString(),
         url: 'https://google.com',
+      },
+    });
+
+    let app3 = new Vue({
+      el: '#app-3',
+      data: {
+        display: true,
       },
     });
   </script>
