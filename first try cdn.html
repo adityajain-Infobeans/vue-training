@@ -26,6 +26,11 @@
     <div id="app-5">
       <button v-on:click="count">You clicked {{counter}} times</button>
     </div>
+
+    <div id="app-6">
+      <p>{{message}}</p>
+      <textarea v-model="message"></textarea>
+    </div>
   </body>
   <script>
     let app = new Vue({
@@ -67,6 +72,13 @@
         count: function () {
           this.counter += 1;
         },
+      },
+    });
+
+    let app6 = new Vue({
+      el: '#app-6',
+      data: {
+        message: 'Type something here',
       },
     });
   </script>
