@@ -25,7 +25,7 @@ let app = new Vue({
     },
     isNew: function () {
       for (let todo of this.todos) {
-        if (todo == this.task) {
+        if (todo.title == this.task) {
           return false;
         }
       }
