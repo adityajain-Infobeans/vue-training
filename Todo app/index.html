@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo App Vue</title>
+  </head>
+  <body class="bg-dark text-light">
+    <div id="root">
+      <div class="container mt-5">
+        <div class="d-flex mb-4">
+          <button type="button" class="btn w-50" :class="state == 'taskList' ? 'btn-primary' : 'btn-secondary'" v-on:click="changeState('taskList')">
+            Tasks List
+          </button>
+          <button type="button" class="btn w-50" :class="state == 'addTask' ? 'btn-primary' : 'btn-secondary'" v-on:click="changeState('addTask')">
+            Add Task
+          </button>
+        </div>
+
+        <div v-if="state == 'addTask'">
+          <h1 class="mb-4">Add Tasks</h1>
+
+          <form v-on:submit.prevent="addTask">
+            <div class="mb-3">
+              <label for="task" class="form-label">Whats the task?</label>
+              <input type="text" class="form-control" id="task" placeholder="Write your task here" v-model="task" />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary w-25" v-on:click.prevent="addTask">Submit</button>
+            </div>
+          </form>
+
+          <p class="text-danger">{{errors}}</p>
+
+          <ul class="">
+            <h5>Current List:</h5>
+            <li class="list-group-item" v-for="task in reversedList" :class="task.completed ? 'text-decoration-line-through' : ''">&#8226; {{task.title}}</li>
+          </ul>
+        </div>
+
+        <div v-if="state == 'taskList'">
+          <h1 class="mb-4">Tasks :</h1>
+
+          <div class="container">
+            <div v-for="(todo, index)  in todos" class="row p-2 mt-2 bg-secondary">
+              <div class="col-sm-11" v-on:click="markTask(todo)">
+                <span class="h4" :class="todo.completed ? 'text-decoration-line-through' : ''">&#8226; {{todo.title}}</span>
+              </div>
+              <div class="col-sm-1 text-center">
+                <button type="button" class="btn btn-danger trash-icon" v-on:click="removeTask(index)">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="row p-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="./script.js"></script>
+</html>
