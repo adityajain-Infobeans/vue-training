@@ -1,26 +1,26 @@
 <template>
   <div>
     <h1>Hello World</h1>
-    <p class="red white--text">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, dolores
-      laboriosam tempore id voluptatibus sit voluptatum incidunt nihil quo
-      laborum consectetur, molestiae reiciendis eveniet perferendis totam. Vitae
-      ipsa reiciendis doloribus?
-    </p>
+    <v-btn class="pink white--text">Click me</v-btn>
+    <v-btn dark depressed color="pink ">click me</v-btn>
+    <v-btn flat color="pink">click me</v-btn>
 
-    <p class="pink lighten-4 red--text text--darken-4">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio,
-      voluptate! Magni nesciunt laudantium, labore optio ipsam doloribus! Non
-      eligendi architecto aspernatur perferendis placeat, voluptatum itaque!
-      Fugit voluptates id harum doloribus!
-    </p>
+    <v-btn depressed class="pink white--text"
+      ><v-icon left>mdi-email-remove</v-icon> click me</v-btn
+    >
 
-    <h1 class="display-4">Massive display</h1>
-    <h4 class="display-1">small display</h4>
-    <h1>test</h1>
-    <p class="heading">heading</p>
-    <p class="subheading font-weight-bold">sub heading</p>
-    <p class="caption">this is caption</p>
+    <v-btn depressed small class="pink white--text"
+      ><v-icon small left>mdi-email-remove</v-icon> click me</v-btn
+    >
+
+    <v-btn depressed large class="pink white--text">
+      <span>click me</span>
+      <v-icon right large>mdi-email-remove</v-icon>
+    </v-btn>
+
+    <v-btn fab depressed small dark color="purple">
+      <v-icon>mdi-email-remove</v-icon>
+    </v-btn>
   </div>
 </template>
 
