@@ -12,6 +12,7 @@
             label="Email"
             id="Email"
             prepend-icon="mdi-account-circle"
+            type="email"
         ></v-text-field>
         <v-text-field
             name="Password"
