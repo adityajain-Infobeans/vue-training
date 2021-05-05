@@ -3,6 +3,8 @@
     <Navbar />
     <Login />
     <Table />
+    <Shop />
+
     <v-main>
       <router-view />
     </v-main>
@@ -13,10 +15,13 @@
 import Navbar from '@/components/Navbar.vue';
 import Login from '@/components/Login.vue';
 import Table from '@/components/Table.vue';
+import Shop from '@/views/Shop.vue';
 
 export default {
   name: 'App',
-  components: { Navbar, Login, Table },
+  components: {
+    Navbar, Login, Table, Shop,
+  },
   data: () => ({
     //
   }),
