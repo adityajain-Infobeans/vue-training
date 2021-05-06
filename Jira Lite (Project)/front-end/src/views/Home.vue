@@ -14,5 +14,8 @@ export default {
   components: {
     HelloWorld,
   },
+  mounted() {
+    document.getElementById('app').style.backgroundColor = '#EC407A';
+  },
 };
 </script>

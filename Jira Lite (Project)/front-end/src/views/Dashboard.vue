@@ -1,8 +1,10 @@
 <template>
-  <v-container>
-    <TicketsSummary />
-    <TicketsTable />
-  </v-container>
+  <div class="white--text">
+    <v-container>
+      <TicketsSummary />
+      <TicketsTable />
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -16,6 +18,10 @@ export default {
   components: {
     TicketsSummary,
     TicketsTable,
+  },
+
+  mounted() {
+    document.getElementById('app').style.backgroundColor = '#BA68C8';
   },
 };
 </script>
