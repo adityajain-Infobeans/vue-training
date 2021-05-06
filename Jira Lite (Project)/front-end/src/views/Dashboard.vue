@@ -2,6 +2,9 @@
   <div class="white--text">
     <v-container>
       <TicketsSummary />
+
+      <v-divider class="my-12"></v-divider>
+
       <TicketsTable />
     </v-container>
   </div>
