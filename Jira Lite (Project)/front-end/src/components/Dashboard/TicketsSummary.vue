@@ -2,22 +2,30 @@
   <div>
     <v-container class="">
       <v-row class="mt-12 pl-4">
-        <h2>Ticket Summary</h2>
+        <h2 class="heading font-weight-bold">Ticket Summary:</h2>
       </v-row>
       <v-row class="mt-6 text-center">
-        <v-col cols="3" class="red white--text rounded" elevation="2">
+        <v-col
+          cols="3"
+          class="yellow darken-3 white--text rounded"
+          elevation="4"
+        >
           <p class="heading mb-2">Total Tickets</p>
-          <p class="display-2">206</p>
+          <p class="display-2">26</p>
         </v-col>
         <v-spacer></v-spacer>
-        <v-col cols="3" class="red white--text rounded" elevation="2">
-          <p class="heading mb-2">Total Tickets</p>
-          <p class="display-2">206</p>
+        <v-col cols="3" class="red darken-1 white--text rounded" elevation="4">
+          <p class="heading mb-2">Open Tickets</p>
+          <p class="display-2">06</p>
         </v-col>
         <v-spacer></v-spacer>
-        <v-col cols="3" class="red white--text rounded" elevation="2">
-          <p class="heading mb-2">Total Tickets</p>
-          <p class="display-2">206</p>
+        <v-col
+          cols="3"
+          class="green darken-1 white--text rounded"
+          elevation="4"
+        >
+          <p class="heading mb-2">Resolved Tickets</p>
+          <p class="display-2">20</p>
         </v-col>
       </v-row>
     </v-container>
