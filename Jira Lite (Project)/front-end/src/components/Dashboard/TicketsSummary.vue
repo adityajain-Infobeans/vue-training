@@ -19,7 +19,6 @@
           <p class="heading mb-2">Total Tickets</p>
           <p class="display-2">206</p>
         </v-col>
-        <v-btn @click="log"></v-btn>
       </v-row>
     </v-container>
   </div>
@@ -27,9 +26,7 @@
 
 <script>
 export default {
-  methods: {
-    log() {},
-  },
+  methods: {},
 };
 </script>
 
