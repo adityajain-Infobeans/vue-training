@@ -12,7 +12,7 @@
       <v-list>
         <v-list-item-group v-model="model">
           <v-list-item
-            v-for="(item, i) in items"
+            v-for="(item, i) in this.$store.state.navItems"
             :key="i"
             router
             :to="item.route"
@@ -34,28 +34,6 @@
 export default {
   data: () => ({
     drawer: false,
-    items: [
-      {
-        icon: 'mdi-home',
-        text: 'Home',
-        route: '/',
-      },
-      {
-        icon: 'mdi-ticket',
-        text: 'Add Ticket',
-        route: '/addTicket',
-      },
-      {
-        icon: 'mdi-view-list',
-        text: 'View Ticket',
-        route: '/ViewTicket',
-      },
-      {
-        icon: 'mdi-logout',
-        text: 'Logout',
-        route: '/Logout',
-      },
-    ],
     model: 1,
   }),
 };
