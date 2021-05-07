@@ -36,7 +36,7 @@ export default {
       {
         icon: 'mdi-home',
         text: 'Home',
-        route: '/dashboard',
+        route: '/',
       },
       {
         icon: 'mdi-ticket',

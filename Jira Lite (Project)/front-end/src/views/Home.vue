@@ -1,21 +1,26 @@
+/* eslint-disable vue/no-unused-components */
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <div v-if="isLogin()"><Dashboard /></div>
+    <div v-else><Login /></div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Dashboard from '@/views/Dashboard.vue';
+import Login from '@/views/Login.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    Dashboard,
+    Login,
   },
-  mounted() {
-    document.getElementById('app').style.backgroundColor = '#EC407A';
+  methods: {
+    isLogin() {
+      return true;
+    },
   },
 };
 </script>
