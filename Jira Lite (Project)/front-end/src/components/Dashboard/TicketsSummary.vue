@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container class="">
-      <v-row class="mt-12 pl-4">
+      <v-row class="mt-6 pl-4">
         <h2 class="headline">Ticket Summary:</h2>
       </v-row>
       <v-row class="mt-6 text-center">
