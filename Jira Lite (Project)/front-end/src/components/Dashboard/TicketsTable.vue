@@ -11,7 +11,7 @@
       dark
     >
       <template v-slot:item="row">
-        <tr class="text-center">
+        <tr class="text-center" @click="detailTicket(row.item.ticket_id)">
           <td>{{ row.item.ticket_id }}</td>
           <td>{{ row.item.ticket_status }}</td>
           <td>{{ row.item.ticket_priority }}</td>
@@ -26,7 +26,7 @@
           <td>
             <v-btn
               class="blue white--text"
-              @click="editTicker(row.item.ticket_id)"
+              @click="editTicket(row.item.ticket_id)"
               small
             >
               <v-icon>mdi-pencil</v-icon> Edit</v-btn
@@ -35,7 +35,7 @@
           <td>
             <v-btn
               class="red white--text"
-              @click="deleteTicker(row.item.ticket_id)"
+              @click="deleteTicket(row.item.ticket_id)"
               small
             >
               <v-icon>mdi-delete</v-icon> Delete</v-btn
@@ -50,11 +50,14 @@
 <script>
 export default {
   methods: {
-    editTicker(id) {
+    editTicket(id) {
       this.$router.push({ path: `/updateticket/${id}` });
     },
-    deleteTicker(id) {
+    deleteTicket(id) {
       console.log(id);
+    },
+    detailTicket(id) {
+      this.$router.push({ path: `/viewticket/${id}` });
     },
   },
 };
