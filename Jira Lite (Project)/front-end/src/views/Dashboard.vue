@@ -3,7 +3,7 @@
     <v-container>
       <TicketsSummary />
 
-      <v-divider class="my-12"></v-divider>
+      <v-divider class="mt-12 mb-5"></v-divider>
 
       <TicketsTable />
     </v-container>
@@ -24,7 +24,8 @@ export default {
   },
 
   mounted() {
-    document.getElementById('app').style.backgroundColor = '#BA68C8';
+    document.getElementById('app').style.backgroundColor = '#AB47BC';
+    document.title = 'Dashboard';
   },
 };
 </script>
