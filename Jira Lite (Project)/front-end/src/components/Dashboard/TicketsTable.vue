@@ -181,7 +181,7 @@ export default {
   },
   methods: {
     editTicker(id) {
-      console.log(id);
+      this.$router.push({ path: `/updateticket/${id}` });
     },
     deleteTicker(id) {
       console.log(id);
