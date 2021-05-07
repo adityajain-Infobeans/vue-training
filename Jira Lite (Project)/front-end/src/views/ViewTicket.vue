@@ -12,7 +12,7 @@
 import TicketsTable from '@/components/Dashboard/TicketsTable.vue';
 
 export default {
-  name: 'View Ticket',
+  name: 'ViewTicket',
   components: {
     TicketsTable,
   },

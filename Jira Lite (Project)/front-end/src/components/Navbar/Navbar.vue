@@ -3,7 +3,9 @@
     <v-app-bar color="" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>My files</v-toolbar-title>
+      <v-toolbar-title>Support Portal</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>Welcome User!</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute bottom temporary dark>
