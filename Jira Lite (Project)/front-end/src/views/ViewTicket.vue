@@ -1,21 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="white--text">
+    <v-container>
+      <TicketsTable />
+    </v-container>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+
+import TicketsTable from '@/components/Dashboard/TicketsTable.vue';
 
 export default {
-  name: 'Home',
+  name: 'View Ticket',
   components: {
-    HelloWorld,
+    TicketsTable,
   },
+
   mounted() {
-    document.getElementById('app').style.backgroundColor = '#BA68C8';
+    document.getElementById('app').style.backgroundColor = '#AA00FF';
+    document.title = 'View Ticket';
   },
 };
 </script>
