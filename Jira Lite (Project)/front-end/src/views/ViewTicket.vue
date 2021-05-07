@@ -8,11 +8,12 @@
 
 <script>
 // @ is an alias to /src
+// params me ticket id h toh uski details dika do varna pura table
 
 import TicketsTable from '@/components/Dashboard/TicketsTable.vue';
 
 export default {
-  name: 'ViewTicket',
+  name: 'ViewTickets',
   components: {
     TicketsTable,
   },
