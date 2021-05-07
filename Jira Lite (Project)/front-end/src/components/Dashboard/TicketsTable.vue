@@ -11,11 +11,14 @@
       dark
     >
       <template v-slot:item="row">
-        <tr class="text-center" @click="detailTicket(row.item.ticket_id)">
+        <tr class="text-center">
           <td>{{ row.item.ticket_id }}</td>
           <td>{{ row.item.ticket_status }}</td>
           <td>{{ row.item.ticket_priority }}</td>
-          <td class="text-left font-weight-bold">
+          <td
+            class="text-left font-weight-bold"
+            @click="detailTicket(row.item.ticket_id)"
+          >
             {{
               row.item.ticket_subject.length > 140
                 ? row.item.ticket_subject.substring(0, 140) + '...'
