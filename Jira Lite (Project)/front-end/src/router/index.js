@@ -44,6 +44,11 @@ const routes = [
     name: 'Logout',
     component: Logout,
   },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "viewticket" */ '../views/NotFound.vue'),
+  },
 ];
 
 const router = new VueRouter({
