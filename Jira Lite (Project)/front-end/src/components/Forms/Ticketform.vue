@@ -1,5 +1,5 @@
 <template >
-  <v-card light class="mt-8">
+  <v-card light class="mt-8 pa-5">
     <v-form>
       <v-container>
         <div v-if="type === 'add'">
@@ -18,7 +18,7 @@
           <h1 class="h1">Your Ticket</h1>
         </div>
 
-        <v-row class="mt-4">
+        <v-row class="mt-4 pa-10">
           <v-col cols="12">
             <v-text-field
               v-model="subject"
@@ -36,6 +36,7 @@
               name="priority"
               v-model="priority"
               :rules="priorityRules"
+              required
             ></v-select>
           </v-col>
 
@@ -45,7 +46,6 @@
               v-model="contactNumber"
               label="Contact Number"
               :rules="contactNumberRules"
-              required
             ></v-text-field>
           </v-col>
 
