@@ -7,6 +7,7 @@
             <TicketFom />
           </v-col>
         </v-row>
+        <TicketComments />
       </div>
       <div v-else>
         <TicketsTable />
@@ -21,12 +22,14 @@
 
 import TicketsTable from '@/components/Dashboard/TicketsTable.vue';
 import TicketFom from '@/components/Forms/Ticketform.vue';
+import TicketComments from '@/components/Forms/TicketComments.vue';
 
 export default {
   name: 'ViewTickets',
   components: {
     TicketsTable,
     TicketFom,
+    TicketComments,
   },
 
   mounted() {
