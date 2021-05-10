@@ -25,6 +25,7 @@
               label="Subject"
               name="subject"
               :rules="subjectRules"
+              :disabled="ifView"
               required
             ></v-text-field>
           </v-col>
@@ -36,6 +37,7 @@
               name="priority"
               v-model="priority"
               :rules="priorityRules"
+              :disabled="ifView"
               required
             ></v-select>
           </v-col>
@@ -45,6 +47,7 @@
               name="contactNo"
               v-model="contactNumber"
               label="Contact Number"
+              :disabled="ifView"
               :rules="contactNumberRules"
             ></v-text-field>
           </v-col>
@@ -54,12 +57,13 @@
               name="description"
               label="Description"
               v-model="description"
+              :disabled="ifView"
               :rules="descriptionRules"
             ></v-textarea>
           </v-col>
 
           <v-col cols="12">
-            <v-btn block color="primary" dark>Submit</v-btn>
+            <v-btn block color="primary" dark v-if="!ifView">Submit</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -110,6 +114,9 @@ export default {
 
   computed: {
     isFormValid: () => {},
+    ifView() {
+      return this.type ? 0 : 1;
+    },
   },
 };
 </script>
