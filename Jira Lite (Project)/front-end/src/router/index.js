@@ -30,12 +30,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "addticket" */ '../views/AddTicket.vue'),
   },
   {
-    path: '/updateticket',
+    path: '/updateticket/:id',
     name: 'Update Ticket',
     component: () => import(/* webpackChunkName: "updateticket" */ '../views/UpdateTicket.vue'),
   },
   {
-    path: '/viewticket',
+    path: '/viewticket/:id?',
     name: 'View Ticket',
     component: () => import(/* webpackChunkName: "viewticket" */ '../views/ViewTicket.vue'),
   },

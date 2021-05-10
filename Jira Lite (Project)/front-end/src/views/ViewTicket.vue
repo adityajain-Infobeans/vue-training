@@ -1,7 +1,16 @@
 <template>
   <div class="white--text">
     <v-container>
-      <TicketsTable />
+      <div v-if="this.$route.params.id">
+        <v-row>
+          <v-col cols="7" class="mx-auto">
+            <TicketFom />
+          </v-col>
+        </v-row>
+      </div>
+      <div v-else>
+        <TicketsTable />
+      </div>
     </v-container>
   </div>
 </template>
@@ -11,15 +20,17 @@
 // params me ticket id h toh uski details dika do varna pura table
 
 import TicketsTable from '@/components/Dashboard/TicketsTable.vue';
+import TicketFom from '@/components/Forms/Ticketform.vue';
 
 export default {
   name: 'ViewTickets',
   components: {
     TicketsTable,
+    TicketFom,
   },
 
   mounted() {
-    document.getElementById('app').style.backgroundColor = '#AA00FF';
+    document.getElementById('app').style.backgroundColor = '#F06292';
     document.title = 'View Ticket';
   },
 };

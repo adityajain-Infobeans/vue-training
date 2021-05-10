@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="7" class="mx-auto">
-        <TicketTable type="add"> </TicketTable>
+        <TicketForm type="add"> </TicketForm>
       </v-col>
     </v-row>
   </v-container>
@@ -10,12 +10,12 @@
 
 <script>
 // @ is an alias to /src
-import TicketTable from '@/components/Forms/Ticketform.vue';
+import TicketForm from '@/components/Forms/Ticketform.vue';
 
 export default {
   name: 'AddTicket',
   components: {
-    TicketTable,
+    TicketForm,
   },
   mounted() {
     document.getElementById('app').style.backgroundColor = '#90CAF9';
