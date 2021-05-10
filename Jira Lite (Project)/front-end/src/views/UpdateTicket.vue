@@ -1,5 +1,11 @@
 <template>
-  <TicketTable type="update"> </TicketTable>
+  <v-container>
+    <v-row>
+      <v-col cols="7" class="mx-auto">
+        <TicketTable type="update"> </TicketTable>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
