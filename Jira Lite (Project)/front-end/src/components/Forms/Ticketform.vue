@@ -24,6 +24,7 @@
               v-model="subject"
               label="Subject"
               name="subject"
+              :rules="subjectRules"
               required
             ></v-text-field>
           </v-col>
@@ -33,14 +34,17 @@
               :items="priorities"
               label="Priority"
               name="priority"
+              v-model="priority"
+              :rules="priorityRules"
             ></v-select>
           </v-col>
 
           <v-col cols="12">
             <v-text-field
               name="contactNo"
-              v-model="contactNo"
+              v-model="contactNumber"
               label="Contact Number"
+              :rules="contactNumberRules"
               required
             ></v-text-field>
           </v-col>
@@ -49,7 +53,8 @@
             <v-textarea
               name="description"
               label="Description"
-              value=""
+              v-model="description"
+              :rules="descriptionRules"
             ></v-textarea>
           </v-col>
 
@@ -66,8 +71,46 @@
 export default {
   props: ['type'],
   data: () => ({
-    priorities: ['P1 -- Critical', 'P2 -- High', 'P3 -- Medium'],
+    priorities: ['', 'P1 -- Critical', 'P2 -- High', 'P3 -- Medium'],
+    subject: null,
+    priority: null,
+    contactNumber: null,
+    description: null,
+    formValidated: 'false',
+
+    subjectRules: [
+      (v) => !!v || 'Subject is required',
+      (v) => (v && v.length >= 10) || 'Subject must be more than 10 characters',
+    ],
+
+    priorityRules: [(v) => !!v || 'Please select a priority level.'],
+
+    contactNumberRules: [
+      (v) => {
+        if (v) {
+          if (v.length !== 10) {
+            return 'Invalid length';
+          }
+          if (!/^[6-9]\d{9}$/.test(v)) {
+            return 'Invalid mobile number';
+          }
+          return true;
+        }
+        return true;
+      },
+    ],
+
+    descriptionRules: [
+      (v) => !!v || 'Please write a valid description.',
+      (v) =>
+        // eslint-disable-next-line implicit-arrow-linebreak
+        (v && v.length >= 50) || 'Description must be more than 50 characters',
+    ],
   }),
+
+  computed: {
+    isFormValid: () => {},
+  },
 };
 </script>
 
