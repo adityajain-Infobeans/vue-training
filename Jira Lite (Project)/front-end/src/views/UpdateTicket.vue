@@ -17,5 +17,9 @@ export default {
   components: {
     TicketForm,
   },
+  mounted() {
+    document.getElementById('app').style.backgroundColor = '#80CBC4';
+    document.title = 'Update Ticket';
+  },
 };
 </script>

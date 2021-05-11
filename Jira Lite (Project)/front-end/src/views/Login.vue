@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card width="400" class="mx-auto mt-5">
+    <v-card width="600" class="mx-auto mt-12">
       <v-card-title>
         <h1 class="display-1">Login</h1>
       </v-card-title>
@@ -40,5 +40,10 @@ export default {
   data: () => ({
     showPassword: false,
   }),
+
+  mounted() {
+    document.getElementById('app').style.backgroundColor = '#FFCC80';
+    document.title = 'Login';
+  },
 };
 </script>
