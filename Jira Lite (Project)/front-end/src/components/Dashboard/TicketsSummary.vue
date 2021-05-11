@@ -2,7 +2,7 @@
   <div>
     <v-container class="">
       <v-row class="mt-6 pl-4">
-        <h2 class="headline">Ticket Summary:</h2>
+        <h2 class="headline black--text">Ticket Summary:</h2>
       </v-row>
       <v-row class="mt-6 text-center">
         <v-col

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 mb-6">Tickets:</h2>
+    <h2 class="display-2 mb-6 black--text">Tickets:</h2>
 
     <!-- refer this  https://stackoverflow.com/questions/59081299/vuetify-insert-action-button-in-data-table-and-get-row-data -->
     <v-data-table

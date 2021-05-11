@@ -24,7 +24,7 @@ export default {
   },
 
   mounted() {
-    document.getElementById('app').style.backgroundColor = '#BA68C8';
+    document.getElementById('app').style.backgroundColor = '#94b5c0';
     document.title = 'Dashboard';
   },
 };
