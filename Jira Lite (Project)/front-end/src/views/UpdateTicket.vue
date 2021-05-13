@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="7" class="mx-auto">
+      <v-col cols="12" sm="8" class="mx-auto">
         <TicketForm type="update"> </TicketForm>
       </v-col>
     </v-row>

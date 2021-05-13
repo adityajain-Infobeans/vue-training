@@ -18,7 +18,7 @@
           <h1 class="h1">Your Ticket</h1>
         </div>
 
-        <v-row class="mt-4 pa-10">
+        <v-row class="mt-4 pa-2">
           <v-col cols="12">
             <v-text-field
               v-model="subject"

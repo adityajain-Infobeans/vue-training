@@ -2,7 +2,7 @@
   <v-container class="mt-5">
     <v-card light class="px-10 pb-10">
       <v-row v-if="isHR" class="mb-5">
-        <v-col cols="4" class="offset-3">
+        <v-col cols="12" sm="4" class="offset-sm-3">
           <v-select
             :items="priorities"
             label="Priority"
@@ -13,7 +13,7 @@
           ></v-select>
         </v-col>
 
-        <v-col cols="2" class="my-auto">
+        <v-col cols="12" sm="4" class="my-auto">
           <v-btn block color="primary" dark :disabled="priorityChanged"
             >Change Priority</v-btn
           >
