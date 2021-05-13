@@ -55,20 +55,23 @@
           <tr class="text-center" v-else>
             <td>
               <ul class="flex-content">
-                <li class="flex-item" data-label="Name">
+                <li class="flex-item" data-label="Ticket Id">
                   {{ row.item.ticket_id }}
                 </li>
-                <li class="flex-item" data-label="Name">
+                <li class="flex-item" data-label="Ticket Status">
                   {{ row.item.ticket_status }}
                 </li>
-                <li class="font-weight-bold flex-item" data-label="Name">
+                <li
+                  class="font-weight-bold flex-item"
+                  data-label="Ticket Priority"
+                >
                   <v-chip :color="bgColor(row.item.ticket_priority)" light>
                     {{ row.item.ticket_priority }}
                   </v-chip>
                 </li>
                 <li
                   class="text-left font-weight-bold flex-item"
-                  data-label="Name"
+                  data-label="Ticket Subject"
                   @click="detailTicket(row.item.ticket_id)"
                 >
                   {{
@@ -77,10 +80,10 @@
                       : row.item.ticket_subject
                   }}
                 </li>
-                <li class="flex-item" data-label="Name">
+                <li class="flex-item" data-label="Ticket Last Updated">
                   {{ row.item.ticket_last_updated }}
                 </li>
-                <li class="flex-item" data-label="Name">
+                <li class="flex-item" data-label="Edit Ticket">
                   <v-btn
                     class="blue white--text"
                     @click="editTicket(row.item.ticket_id)"
@@ -89,7 +92,7 @@
                     <v-icon>mdi-pencil</v-icon> Edit</v-btn
                   >
                 </li>
-                <li class="flex-item" data-label="Name">
+                <li class="flex-item" data-label="Delete Ticket">
                   <v-btn
                     class="red white--text"
                     @click="deleteTicket(row.item.ticket_id)"

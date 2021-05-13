@@ -3,12 +3,12 @@
     <v-app-bar color="" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Support Portal</v-toolbar-title>
+      <v-toolbar-title class="body-1 pl-1">Support Portal</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-title>Welcome User!</v-toolbar-title>
+      <v-toolbar-title class="body-1">Welcome User!</v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute dark>
+    <v-navigation-drawer v-model="drawer" absolute temporary dark>
       <v-list>
         <v-list-item-group v-model="model">
           <v-list-item
