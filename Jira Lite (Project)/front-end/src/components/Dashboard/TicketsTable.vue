@@ -14,7 +14,11 @@
         <tr class="text-center">
           <td>{{ row.item.ticket_id }}</td>
           <td>{{ row.item.ticket_status }}</td>
-          <td>{{ row.item.ticket_priority }}</td>
+          <td class="font-weight-bold">
+            <v-chip :color="bgColor(row.item.ticket_priority)" light>
+              {{ row.item.ticket_priority }}
+            </v-chip>
+          </td>
           <td
             class="text-left font-weight-bold"
             @click="detailTicket(row.item.ticket_id)"
@@ -61,6 +65,19 @@ export default {
     },
     detailTicket(id) {
       this.$router.push({ path: `/viewticket/${id}` });
+    },
+
+    bgColor(priority) {
+      if (priority === 'P1') {
+        return 'red';
+      }
+      if (priority === 'P2') {
+        return 'orange';
+      }
+      if (priority === 'P3') {
+        return 'yellow';
+      }
+      return 'green';
     },
   },
 };
