@@ -8,7 +8,7 @@
       <v-toolbar-title>Welcome User!</v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary dark>
+    <v-navigation-drawer v-model="drawer" absolute dark>
       <v-list>
         <v-list-item-group v-model="model">
           <v-list-item
