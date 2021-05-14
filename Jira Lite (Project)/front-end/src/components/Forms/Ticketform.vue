@@ -115,7 +115,7 @@ export default {
   computed: {
     isFormValid: () => {},
     ifView() {
-      return this.type ? 0 : 1;
+      return !this.type;
     },
   },
 };
