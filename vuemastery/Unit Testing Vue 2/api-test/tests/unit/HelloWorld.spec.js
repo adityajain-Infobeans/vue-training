@@ -1,9 +1,11 @@
+/* eslint-disable import/extensions */
+/* eslint-disable quotes */
 import HelloWorld from "@/components/HelloWorld";
 import { getMessage } from "@/services/axios";
 
 import { mount } from "@vue/test-utils";
 
-import flushPromises from "flush-promises";
+// import flushPromises from "flush-promises";
 
 jest.mock("@/services/axios");
 
@@ -11,9 +13,10 @@ describe("MessageDisplay", () => {
   it("Calls getMessage once and displays message", async () => {
     const mockMessage = "Hello from the db";
     getMessage.mockResolvedValueOnce({ text: mockMessage });
+    // eslint-disable-next-line no-unused-vars
     const wrapper = mount(HelloWorld);
 
-    await flushPromises();
+    // await flushPromises();
     expect(getMessage).toHaveBeenCalledTimes(1); // check that call happened once
 
     // check that component displays message
